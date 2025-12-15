@@ -52,7 +52,7 @@ The algorithm presets are pre-configured setups added to simplify reproducing ou
 
 ### Robot Colors
 
-Define robot types with character-color pairs:
+Define robot colors with character-color pairs (the colors will be used in web-algo after):
 1. Click **"+ Add Color"**
 2. Enter a unique character (F, L, R, etc.)
 3. Select a color
@@ -68,8 +68,10 @@ Generate all possible initial robot configurations.
 
 ### What are Initial Configurations?
 
-- **Essential configurations**: Validate where robots are far from obstacles
-- **Non-essential configurations**: Complete validation coverage
+Initial configurations refer to the initial positions of the robots.
+
+- **Essential configurations**: Initial configuration where it is achievable from the base algorithm
+- **Non-essential configurations**: Initial configuration where it is not achievable from the base algorithm
 - Together they guarantee the algorithm is locally defined
 
 ### How to Create

@@ -2,6 +2,8 @@
 
 This wizard generates a config.json file for RoASt.
 
+**Live Wizard**: https://luminousrobots.github.io/RoASt-Configuration-Wizard/
+
 ---
 
 ## Overview

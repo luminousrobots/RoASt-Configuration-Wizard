@@ -815,33 +815,34 @@ const algo3PresetData = {
 
 const algorithmPresets = [
   {
-    title: "Algorithm 1 - obstacle O,",
-    description: "2 robots with visibility range 1, using colors F, L, R. Leader-based algorithm with obstacle O.",
+    title: "Exec1 | Algo1 | Obstacle:opaque | Goals1 | Main",
+    description: "2 robots with visibility range 1, using colors F, L, R. Leader-based algorithm with an opaque obstacle.",
     data: algo1PresetData
   },
   {
-    title: "Algorithm 1 - obstacle O:reodered goals",
-    description: "Same as Algorithm 1 but with reordered goals for different validation sequence.",
+    title: "Exec2 | Algo1 | Obstacle:opaque | Goals2 | Main",
+    description: "Algorithm 1 with a second goal set as the main execution.",
     data: algo1PresetData2
   },
   {
-    title: "Algorithm 2 - obstacle O, goal example 1",
-    description: "2 robots with visibility range 2, using colors F and L. Enhanced visibility for more complex patterns.",
+    title: "Exec3 | Algo2 | Obstacle:opaque | Goals1",
+    description: "2 robots with visibility range 2, using colors F and L.",
     data: algo2PresetData
   },
   {
-    title: "Algorithm 2 - obstacle O, goal example 1: reordered goals",
-    description: "Same as Algorithm 2 example 1 but with reordered goals for alternative validation.",
+    title: "Exec4 | Algo2 | Obstacle:opaque | Goals1:Reordered",
+    description: "Same as Exec3 but with reordered goals.",
     data: algo2PresetData2
   },
   {
-    title: "Algorithm 2 - obstacle O, goal example 2",
-    description: "Algorithm 2 variant with different goal configurations for testing alternative scenarios.",
+    title: "Exec5 | Algo2 | Obstacle:opaque | Goals2",
+    description: "Algorithm 2 variant with a different goal configuration.",
     data: algo2PresetData3
   },
   {
-    title: "Algorithm 2 - obstacle O, goal example 3",
-    description: "Algorithm 2 variant with third set of goal examples for comprehensive testing.",
+    title: "Exec6 | Algo2 | Obstacle:opaque | Goals3",
+    description: "Algorithm 2 variant with a third goal set.",
     data: algo2PresetData4
   },
 ];
+

@@ -1,6 +1,6 @@
 # RoASt Configuration Wizard Guide
 
-**Live Wizard**: <a href="https://luminousrobots.github.io/RoASt-Configuration-Wizard/" target="_blank">https://luminousrobots.github.io/RoASt-Configuration-Wizard/</a>
+**Live Wizard**: [https://luminousrobots.github.io/RoASt-Configuration-Wizard/](https://luminousrobots.github.io/RoASt-Configuration-Wizard/){:target="_blank"}
 
 ---
 

@@ -844,9 +844,4 @@ const algorithmPresets = [
     description: "Algorithm 2 variant with third set of goal examples for comprehensive testing.",
     data: algo2PresetData4
   },
-  {
-    title: "Algorithm 3 - obstacle O, goal example 1",
-    description: "Experimental algorithm configuration with different movement patterns and validation approach.",
-    data: algo3PresetData
-  }
 ];

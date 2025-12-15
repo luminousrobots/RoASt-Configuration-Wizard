@@ -156,8 +156,8 @@ Review and download your complete configuration.
 
 - **Parameters**: Robot count, visibility range, generation mode
 - **Obstacle Configuration**: Type and opacity settings
-- **Robot Colors**: All defined robot types
-- **`web-algo` Parameters**: 
+- **Robot Colors**: All defined robot colors 
+- **`web-algo` Parameters**: Initial grid, colors, dimensions of the grid, ...
 - **Goals**: Goal count 
 
 ### Download Configuration

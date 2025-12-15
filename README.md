@@ -30,7 +30,7 @@ Select a preset to load a pre-configured algorithm setup:
 |-------|-------------|---------|
 | **Number of Robots** | Total robots participating in the algorithm | 2, 3, 4 |
 | **Visibility Range** | Maximum distance where robots can detect each other | 1, 2, 3 |
-| **Algorithm Path** | Path to the existing algorithm rules file (JSON) | `/src/data/algorithms_data.json` |
+| **Algorithm Path** | Path to the existing algorithm rules file (JSON). By default, integrated algorithms are: `/src/data/algorithms_data.json` (Algorithm 1), `/src/data/algorithms_data2.json` (Algorithm 2), `/src/data/algorithms_data3.json` (Algorithm 3). You can also add your custom algorithm file and pass its path here. | `/src/data/algorithms_data.json` or `/path/to/custom_algo.json` |
 | **Generation Mode** | Synthesis strategy (All or ProgressiveValidationByLevels) | ProgressiveValidationByLevels |
 | **Level** | Number of progressive validation levels | 5 |
 | **Opacity** | Whether robots can see through other robots | ☑ / ☐ |

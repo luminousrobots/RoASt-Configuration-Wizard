@@ -1,6 +1,6 @@
 # RoASt Configuration Wizard Guide
 
-A step-by-step guide to using the RoASt Configuration Generator web interface.
+This wizard generates a config.json file for RoASt.
 
 ---
 

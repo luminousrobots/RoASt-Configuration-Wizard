@@ -41,7 +41,7 @@ The algorithm presets are pre-configured setups added to simplify reproducing ou
 
 **Generation Modes**:
 - **All**: Generates all algorithms, validates them, then classifies
-- **ProgressiveValidationByLevels**: Validates by level, classifies in activation sets, picks specified level number
+- **ProgressiveValidationByLevels**: Picks generated algorithms from the smallest activation set, validates them, classifies them, and stops at the specified Level
 
 ### Obstacle Configuration
 

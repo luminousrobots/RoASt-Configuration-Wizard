@@ -15,16 +15,18 @@ This wizard helps you create a `config.json` file for the RoASt (Robot Algorithm
 
 Define the fundamental settings for your algorithm synthesis.
 
-### Algorithm Preset
+### Execution Preset
 
-The algorithm presets are pre-configured setups added to simplify reproducing our results. Select a preset to load:
-- **Algorithm 1 - obstacle O**
-- **Algorithm 1 - obstacle O: reordered goals**
-- **Algorithm 2 - obstacle O, goal example 1**
-- **Algorithm 2 - obstacle O, goal example 1: reordered goals**
-- **Algorithm 2 - obstacle O, goal example 2**
-- **Algorithm 2 - obstacle O, goal example 3**
-- **Algorithm 3 - obstacle O, goal example 1**
+Execution presets are pre-configured executions used to simplify reproducing our results.
+Select a preset to load a specific combination of algorithm, obstacle, and goal configuration.
+
+* **Exec1 | Algo1 | Obstacle:opaque | Goals1 | Main**
+* **Exec2 | Algo1 | Obstacle:opaque | Goals2 | Main**
+* **Exec3 | Algo2 | Obstacle:opaque | Goals1**
+* **Exec4 | Algo2 | Obstacle:opaque | Goals1:Reordered**
+* **Exec5 | Algo2 | Obstacle:opaque | Goals2**
+* **Exec6 | Algo2 | Obstacle:opaque | Goals3**
+* **Exec7 | Algo3 | Obstacle:opaque | Goals1**
 
 **Note**: To modify preset data, add `?edit=true` to the URL.
 

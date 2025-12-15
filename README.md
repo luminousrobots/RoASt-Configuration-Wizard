@@ -17,10 +17,14 @@ Define the fundamental settings for your algorithm synthesis.
 
 ### Algorithm Preset
 
-Select a preset to load a pre-configured algorithm setup:
-- **Algorithm 1**: Leader-based with obstacle O
-- **Algorithm 2**: Cooperative with obstacle O  
-- **Custom Configuration**: Start from scratch
+The algorithm presets are pre-configured setups added to simplify reproducing our results. Select a preset to load:
+- **Algorithm 1 - obstacle O**
+- **Algorithm 1 - obstacle O: reordered goals**
+- **Algorithm 2 - obstacle O, goal example 1**
+- **Algorithm 2 - obstacle O, goal example 1: reordered goals**
+- **Algorithm 2 - obstacle O, goal example 2**
+- **Algorithm 2 - obstacle O, goal example 3**
+- **Algorithm 3 - obstacle O, goal example 1**
 
 **Note**: To modify preset data, add `?edit=true` to the URL.
 

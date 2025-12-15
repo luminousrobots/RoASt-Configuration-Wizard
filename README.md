@@ -1,8 +1,6 @@
 # RoASt Configuration Wizard Guide
 
-This wizard generates a config.json file for RoASt.
-
-**Live Wizard**: https://luminousrobots.github.io/RoASt-Configuration-Wizard/
+**Live Wizard**: <a href="https://luminousrobots.github.io/RoASt-Configuration-Wizard/" target="_blank">https://luminousrobots.github.io/RoASt-Configuration-Wizard/</a>
 
 ---
 

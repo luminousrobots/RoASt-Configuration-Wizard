@@ -865,28 +865,28 @@ const algorithmPresets = [
   },
   {
     title: "Exec2 | Algo2 | Obstacle:opaque | Goals1 | Main",
-    description: "Algorithm 1 with a second goal set as the main execution.",
+    description: "Algorithm 2 with opaque obstacle and first goal set as the main execution.",
     data: algo2PresetData0
   },
     {
     title: "Exec3 | Algo2 | Obstacle:opaque | Goals1:Reordered",
-    description: "Same as Exec3 but with reordered goals.",
+    description: "Algorithm 2 with opaque obstacle and reordered goals from the first goal set.",
     data: algo2PresetData1
   },
   {
     title: "Exec4 | Algo2 | Obstacle:transparent | Goals1",
-    description: "2 robots with visibility range 2, using colors F and L.",
+    description: "Algorithm 2 with transparent obstacle and first goal set.",
     data: algo2PresetData2
   },
 
   {
     title: "Exec5 | Algo2 | Obstacle:opaque | Goals2",
-    description: "Algorithm 2 variant with a different goal configuration.",
+    description: "Algorithm 2 with opaque obstacle and second goal set.",
     data: algo2PresetData3
   },
   {
     title: "Exec6 | Algo2 | Obstacle:opaque | Goals3",
-    description: "Algorithm 2 variant with a third goal set.",
+    description: "Algorithm 2 with opaque obstacle and third goal set.",
     data: algo2PresetData4
   },
 ];

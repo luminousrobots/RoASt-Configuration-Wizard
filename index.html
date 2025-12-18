@@ -558,6 +558,199 @@
         color: #92400e;
       }
       /* --- END STYLES FROM 2ND FILE --- */
+
+      /* === RESPONSIVE STYLES FOR SMALL SCREENS === */
+      @media (max-width: 768px) {
+        /* Goals Simulator - Stack grids vertically */
+        .grids-wrapper {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          overflow-x: visible !important;
+        }
+        
+        .frame-container {
+          margin: 0 0 15px 0 !important;
+          width: 100% !important;
+          max-width: 350px !important;
+        }
+        
+        /* Reduce canvas size for small screens */
+        .view-canvas {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        
+        /* Robot palette - wrap items */
+        .robot-palette {
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+          gap: 8px !important;
+        }
+        
+        /* Simulation frames */
+        .simulation-frame {
+          margin: 0 5px 12px 5px !important;
+        }
+        
+        /* Grid wrapper responsive */
+        #output-container {
+          grid-template-columns: 1fr !important;
+          padding: 1rem !important;
+          gap: 1rem !important;
+        }
+        
+        /* Progress bar - compact for mobile */
+        nav[aria-label="Progress"] {
+          width: 100% !important;
+          overflow-x: auto !important;
+          padding: 0.25rem 0 !important;
+        }
+        
+        nav[aria-label="Progress"] .flex {
+          gap: 0.5rem !important;
+          min-width: min-content !important;
+        }
+        
+        /* Stepper - hide text labels, show only numbers */
+        nav[aria-label="Progress"] span.text-xs,
+        nav[aria-label="Progress"] span.text-sm {
+          display: none !important;
+        }
+        
+        /* Stepper circles - smaller */
+        nav[aria-label="Progress"] .w-7.h-7 {
+          width: 1.75rem !important;
+          height: 1.75rem !important;
+          font-size: 0.75rem !important;
+        }
+        
+        /* Arrows between steps - smaller */
+        nav[aria-label="Progress"] svg.w-3 {
+          width: 0.5rem !important;
+          height: 0.5rem !important;
+        }
+        
+        /* Header - stack on small screens */
+        #main-container-card > div.flex.flex-col.lg\\:flex-row {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 1rem !important;
+        }
+        
+        /* Center progress bar on mobile */
+        nav[aria-label="Progress"] {
+          align-self: center !important;
+        }
+        
+        /* Main title */
+        h1 {
+          font-size: 1.75rem !important;
+        }
+        
+        /* Form inputs - full width */
+        input, select, textarea {
+          width: 100% !important;
+        }
+        
+        /* Buttons - stack vertically */
+        .flex.gap-3.justify-end {
+          flex-direction: column !important;
+          gap: 0.5rem !important;
+        }
+        
+        .flex.gap-3.justify-end button {
+          width: 100% !important;
+        }
+        
+        /* Modal adjustments */
+        .modal-content {
+          margin: 1rem !important;
+          max-height: 90vh !important;
+          overflow-y: auto !important;
+        }
+        
+        /* Color pickers - smaller grid */
+        .grid.grid-cols-2 {
+          grid-template-columns: 1fr !important;
+        }
+        
+        /* Frame header - wrap if needed */
+        .frame-header {
+          flex-wrap: wrap !important;
+        }
+        
+        .frame-header h4 {
+          font-size: 0.9em !important;
+        }
+        
+        /* Reduce padding */
+        .main-card {
+          padding: 1rem !important;
+        }
+        
+        /* Goals simulator column */
+        #simulator-column {
+          padding: 0.5rem !important;
+        }
+        
+        /* Add grid button */
+        .add-grid-btn {
+          width: 40px !important;
+          height: 40px !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        /* Extra small screens */
+        body {
+          font-size: 14px !important;
+        }
+        
+        h1 {
+          font-size: 1.5rem !important;
+        }
+        
+        .frame-container {
+          max-width: 280px !important;
+        }
+        
+        /* Robot palette items smaller */
+        .palette-robot,
+        .palette-waypoint,
+        .palette-exclusive,
+        .palette-wall {
+          width: 36px !important;
+          height: 36px !important;
+          font-size: 14px !important;
+        }
+        
+        /* Smaller canvas */
+        canvas {
+          transform: scale(0.85) !important;
+          transform-origin: top left !important;
+        }
+        
+        /* Compact frame header */
+        .drag-handle {
+          width: 20px !important;
+          height: 20px !important;
+          margin-right: 5px !important;
+        }
+        
+        .close-frame-btn,
+        .rotate-btn {
+          width: 24px !important;
+          height: 24px !important;
+          font-size: 12px !important;
+        }
+        
+        /* Stepper numbers only */
+        nav[aria-label="Progress"] {
+          transform: scale(0.9) !important;
+        }
+      }
+      /* === END RESPONSIVE STYLES === */
     </style>
   </head>
   <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
@@ -706,7 +899,7 @@
                 style="padding: 5px 10px; font-size: 0.9em"
                 title="Open help guide"
               >
-                ? Help
+                Instructions
               </button>
             </div>
 
@@ -1052,7 +1245,7 @@
                   style="padding: 5px 10px; font-size: 0.9em"
                   title="Open help guide"
                 >
-                  ? Help
+                  Instructions
                 </button>
               </div>
 
@@ -1277,7 +1470,7 @@
               style="padding: 5px 10px; font-size: 0.9em"
               title="Open help guide"
             >
-              ? Help
+              Instructions
             </button>
           </div>
 
@@ -1614,6 +1807,16 @@
               id="summary-content"
               class="space-y-2 text-sm bg-white p-4 rounded-lg border border-gray-200"
             ></div>
+            
+            <div class="mt-5 p-4 bg-blue-50 rounded-lg border border-blue-100 flex items-start gap-3">
+              <svg class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="text-sm text-blue-800">
+                <strong>Next Step:</strong> Place the downloaded <code class="bg-blue-100 px-1 py-0.5 rounded text-blue-900 font-mono text-xs">config.json</code> file in your RoASt root directory (at the same level as the <code class="bg-blue-100 px-1 py-0.5 rounded text-blue-900 font-mono text-xs">src</code> folder).
+              </div>
+            </div>
+
             <button
               id="toggle-details-btn"
               class="mt-5 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-semibold shadow-sm hover:shadow-md transition-all"
@@ -1639,11 +1842,11 @@
             </button>
           </div>
 
-          <div class="pt-8 mt-6 border-t border-gray-200 flex flex-wrap gap-4 justify-between items-center">
+          <div class="pt-8 mt-6 border-t border-gray-200 flex flex-col-reverse sm:flex-row gap-4 justify-between items-center">
             <button
               type="button"
               id="prev-btn-page4"
-              class="group flex items-center justify-center py-3 px-8 border-2 border-gray-300 rounded-lg shadow-sm text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all"
+              class="group w-full sm:w-auto flex items-center justify-center py-3 px-8 border-2 border-gray-300 rounded-lg shadow-sm text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all"
             >
               <svg
                 class="mr-2 w-5 h-5 group-hover:-translate-x-1 transition-transform"
@@ -1663,7 +1866,7 @@
             
             <button
               id="download-btn"
-              class="flex items-center justify-center py-3 px-6 border border-transparent rounded-lg shadow-md text-base font-semibold text-white bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all"
+              class="group w-full sm:w-auto flex items-center justify-center py-3 px-8 border border-transparent rounded-lg shadow-md text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all"
             >
               <svg
                 class="mr-2 w-5 h-5"
@@ -1722,44 +1925,20 @@
         </div>
         <div style="padding: 24px; max-height: calc(100vh - 200px); overflow-y: auto; line-height: 1.6; color: #333; font-size: 14px;">
           
-          <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: #2d3748;">What is a Goal?</h3>
-          <p style="margin: 0 0 16px 0;">A Goal is a robot movement puzzle. It defines where robots start, where they need to go, and what constraints they must follow.</p>
-
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">How to Create a Goal</h3>
-          
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">1. Add Goal</strong>
-            <span>Click <strong>+ Add Goal</strong> to create a new scenario.</span>
-          </div>
+          <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: #2d3748;">Page 3 Instructions: Goals</h3>
+          <p style="margin: 0 0 16px 0;">Create the specific puzzles or tasks your robots need to solve.</p>
 
           <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">2. Place Robots</strong>
-            <span>Drag robots (e.g., F, L, R, O) from the palette to the <strong>Starting Position</strong> and <strong>Target</strong> grids.</span>
+            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">How to Define a Goal:</strong>
+            <ol style="margin: 0; padding-left: 20px;">
+              <li style="margin-bottom: 6px;">Click <strong>+ Add Goal</strong> to start a new scenario.</li>
+              <li style="margin-bottom: 6px;">Place robots on the <strong>Start</strong> grid and the <strong>Target</strong> grid.</li>
+              <li style="margin-bottom: 6px;">Set <strong>Boundaries</strong> by dragging the dashed lines.</li>
+              <li style="margin-bottom: 6px;">Add <strong>Waypoints</strong> (locations to visit) or <strong>Exclusive Points</strong> (locations to avoid) if needed.</li>
+            </ol>
           </div>
 
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">3. Set Constraints</strong>
-            <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-              <li><strong>Boundaries:</strong> Drag dashed lines to set movement area</li>
-              <li><strong>Steps:</strong> Set number in Steps input</li>
-              <li><strong>Waypoints:</strong> Drag waypoint icons to mark positions that must be visited at least once</li>
-              <li><strong>Exclusive Points:</strong> Drag exclusive point icons to mark positions that are not allowed to be visited</li>
-            </ul>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 20px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">4. Continue</strong>
-            <span>Click <strong>Continue</strong> to export to embed the goals in the configuration file <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code>.</span>
-          </div>
-
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">Quick Tips</h3>
-          <ul style="margin: 0; padding-left: 20px;">
-            <li style="margin-bottom: 6px;">Drag robots from palette to place them</li>
-            <li style="margin-bottom: 6px;">Drag boundary edges to resize area</li>
-            <li style="margin-bottom: 6px;">Click rotate button to rotate goals</li>
-            <li style="margin-bottom: 6px;">Click (+) to add more targets</li>
-            <li style="margin-bottom: 6px;">Reset goals will reload the goals from the preset configuration</li>
-          </ul>
+          <p style="margin: 0 0 0 0;">Once finished, click <strong>Continue</strong> to generate your final <code>config.json</code> file.</p>
         </div>
       </div>
     </div>
@@ -1773,43 +1952,20 @@
         </div>
         <div style="padding: 24px; max-height: calc(100vh - 200px); overflow-y: auto; line-height: 1.6; color: #333; font-size: 14px;">
           
-          <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: #2d3748;">What is this Editor?</h3>
-          <p style="margin: 0 0 16px 0;">This editor generates all possible initial configurations (initial robot positions) by calculating where obstacles can appear. <strong>Essential + Non-essential</strong> configurations together guarantee the algorithm is locally defined (runs in all initial positions). The <strong>essential</strong> configurations alone validate where robots are far from obstacles.</p>
-
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">How to Create Initial Configurations</h3>
-          
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">1. Show Editor</strong>
-            <span>Click <strong>▼ Show</strong> button to open the Initial Configuration Editor panel.</span>
-          </div>
+          <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: #2d3748;">Page 2 Instructions: Initial Configurations</h3>
+          <p style="margin: 0 0 16px 0;">Define how your robots are positioned at the start of the simulation.</p>
 
           <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">2. Add Pattern</strong>
-            <span>Click <strong>+ Add Pattern</strong> and place robots from the palette. Direction must be <strong>left to right</strong>.</span>
+            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">How to Use the Editor:</strong>
+            <ol style="margin: 0; padding-left: 20px;">
+              <li style="margin-bottom: 6px;">Click <strong>▼ Show</strong> to open the visual editor.</li>
+              <li style="margin-bottom: 6px;">Click <strong>+ Add Pattern</strong> to create a new movement scenario.</li>
+              <li style="margin-bottom: 6px;"><strong>Drag and Drop</strong> robots from the palette onto the grids.</li>
+              <li style="margin-bottom: 6px;">Select <strong>Leader Colors</strong> to specify which robots drive the meaningful movement.</li>
+            </ol>
           </div>
 
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">3. Select Leader Colors</strong>
-            <span>Choose which robot colors can be leaders to automatically calculate essential property.</span>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">4. Switch Essential Status</strong>
-            <span>Manually toggle essential status for each configuration if corrections are needed.</span>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 20px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">5. Continue</strong>
-            <span>Click <strong>Continue</strong> to embed the configurations in <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code>.</span>
-          </div>
-
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">Quick Tips</h3>
-          <ul style="margin: 0; padding-left: 20px;">
-            <li style="margin-bottom: 6px;">Drag robots from palette to place them</li>
-            <li style="margin-bottom: 6px;">Click X on pattern to delete it</li>
-            <li style="margin-bottom: 6px;">Drag a robot out of the grid to remove it</li>
-            <li style="margin-bottom: 6px;">Use "Reset from Preset" to reload defaults</li>
-          </ul>
+          <p style="margin: 0 0 0 0;">The system automatically generates specific initial positions based on your patterns. You can review them in the list below the editor.</p>
         </div>
       </div>
     </div>
@@ -1823,79 +1979,22 @@
         </div>
         <div style="padding: 24px; max-height: calc(100vh - 200px); overflow-y: auto; line-height: 1.6; color: #333; font-size: 14px;">
           
-          <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: #2d3748;">What is RoASt?</h3>
-          <p style="margin: 0 0 16px 0;"><strong>RoASt</strong> (Robot Algorithm Synthesizer Tool) synthesizes robot algorithms based on existing algorithm rules. This configuration wizard helps you create a <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code> file containing all the parameters needed for algorithm synthesis and validation.</p>
+          <h3 style="font-size: 16px; font-weight: 600; margin: 0 0 12px 0; color: #2d3748;">General Purpose</h3>
+          <p style="margin: 0 0 16px 0;">This tool helps you create a configuration file (config.json) for the RoASt algorithm synthesizer. You will define robot parameters, initial positions, and goals across 4 simple steps.</p>
 
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">How to Set Up the Configuration File in RoASt?</h3>
-          <p style="margin: 0 0 12px 0;">After completing all steps in this wizard, you'll download a <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code> file. To use it with the RoASt tool:</p>
+          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">Page 1 Instructions: Parameters</h3>
+          <p style="margin: 0 0 16px 0;">Configure the fundamental settings for your robot swarm:</p>
           
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">1. Download Configuration</strong>
-            <span>Download the generated <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code> file from the final summary page</span>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">2. Navigate to Project</strong>
-            <span>Navigate to your RoASt project folder (the one containing the <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">src</code> folder)</span>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">3. Place Configuration File</strong>
-            <span>Place the <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code> file in the <strong>RoASt root directory</strong> (as a sibling to the <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">src</code> folder)</span>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 16px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">4. Run RoASt</strong>
-            <span>Run the RoASt tool - it will automatically load the configuration from <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code></span>
-          </div>
-
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">What Does This Page Do?</h3>
-          <p style="margin: 0 0 16px 0;">This <strong>Parameters Configuration</strong> page is where you define the fundamental settings for your algorithm synthesis: robot count, visibility range, obstacle type, robot colors, and generation mode. These parameters will be used by RoASt to synthesize the algorithms and validate them.</p>
-
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">Configuration Sections</h3>
-          
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">1. Execution Preset</strong>
-            <span>Select a preset to load a previous execution configuration with all its associated parameters. You can use it as-is to reproduce the same execution. To modify preset data, add <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">?edit=true</code> to the URL.</span>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">2. Basic Configuration</strong>
-            <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-              <li><strong>Number of Robots:</strong> Total robots participating in the algorithm</li>
-              <li><strong>Visibility Range:</strong> Maximum distance where robots can see</li>
-              <li><strong>Algorithm Path:</strong> Path to the existing algorithm rules file (JSON format)</li>
-              <li><strong>Generation Mode:</strong> Synthesis strategy
-                <ul style="margin: 4px 0 0 0; padding-left: 20px;">
-                  <li><strong>All:</strong> Generates all algorithms, then validates them, then classifies</li>
-                  <li><strong>Progressive:</strong> Validates by level - classifies algorithms in activation sets and picks only the specified level number of them</li>
-                </ul>
-              </li>
-              <li><strong>Level:</strong> Number of progressive validation levels to generate</li>
-              <li><strong>Opacity:</strong> Whether robots can see through other robots or not</li>
-            </ul>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 14px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">3. Obstacle Configuration</strong>
-            <ul style="margin: 8px 0 0 0; padding-left: 20px;">
-              <li><strong>Obstacle Type:</strong> <strong>O</strong> (Orange) for custom obstacle or <strong>W</strong> (Black) for wall obstacle</li>
-              <li><strong>Obstacle Opaque:</strong> When checked, robots cannot see through obstacles (required for walls)</li>
-            </ul>
-          </div>
-
-          <div style="background: #f7fafc; padding: 14px; border-radius: 6px; margin-bottom: 20px; border-left: 3px solid #4a5568;">
-            <strong style="display: block; margin-bottom: 6px; color: #2d3748;">4. Robot Colors</strong>
-            <span>Define robot types by assigning unique characters (F, L, R, etc.) and colors. These identifiers are used for the algorithms in the simulation results later.</span>
-          </div>
-
-          <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0; color: #2d3748;">Quick Tips</h3>
           <ul style="margin: 0; padding-left: 20px;">
-            <li style="margin-bottom: 6px;">Start with a preset - it loads a complete, tested algorithm configuration</li>
-            <li style="margin-bottom: 6px;">Use Progressive mode with levels for solution spaces</li>
-            <li style="margin-bottom: 6px;">The final <code style="background: #e2e8f0; padding: 2px 6px; border-radius: 3px;">config.json</code> will contain all these parameters for RoASt synthesis</li>
-            <li style="margin-bottom: 6px;">Click "Continue" to define initial configurations and goals</li>
+            <li style="margin-bottom: 8px;"><strong>Execution Preset:</strong> Select a pre-defined template or choose "Custom" to build from scratch.</li>
+            <li style="margin-bottom: 8px;"><strong>Basic Config:</strong> Set the number of robots (e.g., 2), their visibility range, and the synthesis generation mode.</li>
+            <li style="margin-bottom: 8px;"><strong>Obstacle Config:</strong> Choose between Custom Obstacles ('O') or Walls ('W').</li>
+            <li style="margin-bottom: 8px;"><strong>Robot Colors:</strong> Assign a unique character (e.g., F, L) and color to each robot type.</li>
           </ul>
+
+          <div style="background: #ebf8ff; padding: 12px; border-radius: 6px; margin-top: 20px; border-left: 4px solid #4299e1;">
+            <strong>Tip:</strong> Start with a Preset to see a working example, then modify it to fit your needs!
+          </div>
         </div>
       </div>
     </div>
@@ -3155,7 +3254,28 @@
         }
 
         // Add event listener for obstacle type changes
-        obstacleTypeSelect.addEventListener("change", updateObstacleOpaque);
+        obstacleTypeSelect.addEventListener("change", () => {
+          updateObstacleOpaque();
+          // Mark initial configurations as modified to force regeneration
+          configsWereModified = true;
+          console.log("Obstacle type changed - initial configurations will be regenerated");
+        });
+
+        // Add event listener for obstacle opacity changes
+        obstacleOpaqueCheckbox.addEventListener("change", () => {
+          // Mark initial configurations as modified to force regeneration
+          configsWereModified = true;
+          console.log("Obstacle opacity changed - initial configurations will be regenerated");
+        });
+
+        // Add event listener for visibility range changes
+        const visibilityRangeInput = document.getElementById("visibility_range");
+        if (visibilityRangeInput) {
+          visibilityRangeInput.addEventListener("change", () => {
+            configsWereModified = true;
+            console.log("Visibility range changed - initial configurations will be regenerated");
+          });
+        }
 
         // Initialize obstacle opaque state
         updateObstacleOpaque();
@@ -3705,6 +3825,8 @@
                 // Update the letterColorMap immediately
                 letterColorMap[letter] = colorInput.value;
                 letterDecimalMap[letter] = hexToDec(colorInput.value);
+                // Mark configs as modified since color changed
+                configsWereModified = true;
               });
 
               // Sync decimal input to color picker
@@ -3713,6 +3835,8 @@
                 colorInput.value = hexValue;
                 letterColorMap[letter] = hexValue;
                 letterDecimalMap[letter] = parseInt(decimalInput.value);
+                // Mark configs as modified since color changed
+                configsWereModified = true;
               });
             }
 
@@ -3848,6 +3972,7 @@
         function validateAndAddColor() {
           const char = newColorChar.value.trim().toUpperCase();
           const decimalValue = parseInt(newColorDecimal.value);
+          const hexValue = newColorPicker.value.toUpperCase();
           
           // Validation
           if (!char) {
@@ -3865,6 +3990,14 @@
             return;
           }
           
+          // Check if character is reserved (O for orange obstacle, W for black wall)
+          if (char === 'O' || char === 'W') {
+            charError.textContent = `Character '${char}' is reserved for obstacles`;
+            charError.style.display = "block";
+            newColorChar.classList.add("border-red-500");
+            return;
+          }
+          
           // Check if character already exists
           const existingLetters = Array.from(colorPickerContainer.children).map(
             (child) => child.dataset.letter
@@ -3876,12 +4009,32 @@
             return;
           }
           
+          // Check if color is reserved (orange #FFA500 for O, black #000000 for W)
+          const reservedColors = ['#FFA500', '#000000'];
+          if (reservedColors.includes(hexValue)) {
+            const colorName = hexValue === '#FFA500' ? 'orange' : 'black';
+            charError.textContent = `Color ${colorName} is reserved for obstacles`;
+            charError.style.display = "block";
+            newColorChar.classList.add("border-red-500");
+            return;
+          }
+          
+          // Check if color already exists in other robot colors
+          const existingColors = Array.from(colorPickerContainer.children).map(
+            (child) => child.querySelector('.color-picker-input').value.toUpperCase()
+          );
+          if (existingColors.includes(hexValue)) {
+            charError.textContent = "This color is already used by another robot";
+            charError.style.display = "block";
+            newColorChar.classList.add("border-red-500");
+            return;
+          }
+          
           // Add to letterColorMap
-          letterColorMap[char] = newColorPicker.value;
+          letterColorMap[char] = hexValue;
           letterDecimalMap[char] = decimalValue;
           
           // Add to color picker container
-          const hexValue = newColorPicker.value;
           const row = document.createElement("div");
           row.className = "flex items-center gap-3 p-2 border rounded-md bg-gray-50 shadow-sm";
           row.dataset.letter = char;
@@ -3911,6 +4064,8 @@
               decimalInput.value = hexToDec(colorInput.value);
               letterColorMap[char] = colorInput.value;
               letterDecimalMap[char] = hexToDec(colorInput.value);
+              // Mark configs as modified since color changed
+              configsWereModified = true;
             });
             
             // Sync decimal input to color picker
@@ -3919,6 +4074,8 @@
               colorInput.value = hexValue;
               letterColorMap[char] = hexValue;
               letterDecimalMap[char] = parseInt(decimalInput.value);
+              // Mark configs as modified since color changed
+              configsWereModified = true;
             });
           }
           
@@ -5599,8 +5756,7 @@
           reader.readAsText(file);
         });
 
-        // Populate the form on load
-        populateForm(defaultData);
+
 
         // Set initial UI state
         updateUI();
@@ -9818,8 +9974,13 @@
             defaultSimulationConfigList.length
           );
 
-          // Parse configs from defaultSimulationConfigList at initialization time
-          window.activeSimulationConfigs = parseDefaultConfigs();
+          // Parse configs from defaultSimulationConfigList OR window.loadedGoalsData at initialization time
+          let initialData = undefined;
+          if (window.loadedGoalsData) {
+            console.log("Using window.loadedGoalsData for initialization");
+            initialData = window.loadedGoalsData;
+          }
+          window.activeSimulationConfigs = parseDefaultConfigs(initialData);
           console.log(
             "Loaded",
             window.activeSimulationConfigs.length,
@@ -10175,6 +10336,42 @@
         });
         // === EMBEDDED GOALS SIMULATOR CODE END ===
       }
+
+      // Ensure Help Modal Functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        const setupModal = (btnId, modalId, closeId) => {
+          const btn = document.getElementById(btnId);
+          const modal = document.getElementById(modalId);
+          const close = document.getElementById(closeId);
+          
+          if (btn && modal) {
+            // Remove existing listeners to avoid duplicates if any (though difficult without reference)
+            // Just add new one, as display='block' is idempotent
+            btn.addEventListener('click', (e) => {
+               e.preventDefault();
+               modal.style.display = 'block';
+            });
+          }
+          
+          if (close && modal) {
+            close.addEventListener('click', () => {
+              modal.style.display = 'none';
+            });
+          }
+          
+          if (modal) {
+             modal.addEventListener('click', (e) => {
+               if (e.target === modal) {
+                 modal.style.display = 'none';
+               }
+             });
+          }
+        };
+
+        setupModal('parametersHelpBtn', 'parametersHelpModal', 'closeParametersHelpModal');
+        setupModal('initialConfigHelpBtn', 'initialConfigHelpModal', 'closeInitialConfigHelpModal');
+        setupModal('goalsHelpBtn', 'goalsHelpModal', 'closeHelpModal');
+      });
     </script>
   </body>
 </html>

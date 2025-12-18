@@ -360,7 +360,7 @@ const algo2PresetData2 = {
     },
     {
       "initial_positions": [["O", 0, 0], ["L", 1, 0], ["F", -1, 0]],
-      "targets": [[5, [["O", 0, 0], ["L", 1, 1], ["F", -1, 1]], [], []]],
+      "targets": [[1, [["O", 0, 0], ["L", 1, 1], ["F", -1, 1]], [], []]],
       "boundary": [-2, 2, -1, 2],
       "wall": [null, null]
     }

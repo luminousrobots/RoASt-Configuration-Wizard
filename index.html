@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RoASt Configuration Generator</title>
+    <title>RoASt Configuration Wizard</title>
     <script src="js/tailwind.min.js"></script>
     <link
       href="css/bootstrap.min.css"
@@ -760,15 +760,15 @@
         class="main-card p-6 sm:p-10 rounded-2xl w-full mx-auto transition-all duration-300"
       >
         <div
-          class="flex flex-col lg:flex-row justify-between items-center mb-6 pb-4 border-b border-gray-200 gap-4"
+          class="flex flex-col lg:flex-row items-center mb-6 pb-4 border-b border-gray-200 gap-4"
         >
           <!-- Title Section -->
-          <div class="flex-shrink-0">
-            <h1 class="text-3xl font-bold text-gray-900">RoASt</h1>
+          <div class="flex-shrink-0 lg:flex-1">
+            <h1 class="text-3xl font-bold text-gray-900">RoASt Configuration Wizard</h1>
           </div>
 
           <!-- Progress Bar Section -->
-          <nav aria-label="Progress" class="flex-grow flex justify-center">
+          <nav aria-label="Progress" class="flex justify-center flex-shrink-0">
             <div class="flex items-center gap-2 sm:gap-4">
               <div id="step-1" class="flex items-center gap-2">
                 <div
@@ -849,7 +849,7 @@
           </nav>
 
           <!-- Load Button Section -->
-          <div class="flex-shrink-0">
+          <div class="flex-shrink-0 lg:flex-1 lg:flex lg:justify-end">
             <input
               type="file"
               id="loadConfigInput"

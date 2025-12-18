@@ -860,34 +860,35 @@ const algo3PresetData = {
 const algorithmPresets = [
   {
     title: "Exec1 | Algo1 | Obstacle:opaque | Goals1 | Main",
-    description: "2 robots with visibility range 1, using colors F, L, R. Leader-based algorithm with an opaque obstacle.",
+    description: "Primary execution of Algorithm 1 with an opaque obstacle and the standard goal set.",
     data: algo1PresetData
   },
   {
     title: "Exec2 | Algo2 | Obstacle:opaque | Goals1 | Main",
-    description: "Algorithm 2 with opaque obstacle and first goal set as the main execution.",
+    description: "Primary execution of Algorithm 2 with an opaque obstacle and the standard goal set.",
     data: algo2PresetData0
   },
-    {
+  {
     title: "Exec3 | Algo2 | Obstacle:opaque | Goals1:Reordered",
-    description: "Algorithm 2 with opaque obstacle and reordered goals from the first goal set.",
+    description: "Variant of Algorithm 2 with an opaque obstacle, using a reordered version of the standard goal set.",
     data: algo2PresetData1
   },
   {
     title: "Exec4 | Algo2 | Obstacle:transparent | Goals1",
-    description: "Algorithm 2 with transparent obstacle and first goal set.",
+    description: "Variant of Algorithm 2 featuring a transparent obstacle to test visibility through obstacles.",
     data: algo2PresetData2
   },
 
   {
     title: "Exec5 | Algo2 | Obstacle:opaque | Goals2",
-    description: "Algorithm 2 with opaque obstacle and second goal set.",
+    description: "Execution of Algorithm 2 with an opaque obstacle, testing the second set of specific goals.",
     data: algo2PresetData3
   },
   {
     title: "Exec6 | Algo2 | Obstacle:opaque | Goals3",
-    description: "Algorithm 2 with opaque obstacle and third goal set.",
+    description: "Execution of Algorithm 2 with an opaque obstacle, testing the third set of specific goals.",
     data: algo2PresetData4
   },
 ];
+
 

@@ -859,36 +859,34 @@ const algo3PresetData = {
 
 const algorithmPresets = [
   {
-    title: "Exec1 | Algo1 | Obstacle:opaque | Goals1 | Main",
-    description: "Primary execution of Algorithm 1 with an opaque obstacle and the standard goal set.",
+    title: "Exec1 | Algo1 | Obstacle:Pole | Goals1 | Main",
+    description: "Primary execution of Algorithm 1 with a pole and the standard goal set.",
     data: algo1PresetData
   },
   {
-    title: "Exec2 | Algo2 | Obstacle:opaque | Goals1 | Main",
-    description: "Primary execution of Algorithm 2 with an opaque obstacle and the standard goal set.",
+    title: "Exec2 | Algo2 | Obstacle:Pole | Goals1 | Main",
+    description: "Primary execution of Algorithm 2 with a pole and the standard goal set.",
     data: algo2PresetData0
   },
   {
-    title: "Exec3 | Algo2 | Obstacle:opaque | Goals1:Reordered",
-    description: "Variant of Algorithm 2 with an opaque obstacle, using a reordered version of the standard goal set.",
+    title: "Exec3 | Algo2 | Obstacle:Pole | Goals1:Reordered",
+    description: "Variant of Algorithm 2 with a pole, using a reordered version of the standard goal set.",
     data: algo2PresetData1
   },
   {
-    title: "Exec4 | Algo2 | Obstacle:transparent | Goals1",
-    description: "Variant of Algorithm 2 featuring a transparent obstacle to test visibility through obstacles.",
+    title: "Exec4 | Algo2 | Obstacle:Hole | Goals1",
+    description: "Variant of Algorithm 2 with a hole and standard goals to test visibility through it.",
     data: algo2PresetData2
   },
 
   {
-    title: "Exec5 | Algo2 | Obstacle:opaque | Goals2",
-    description: "Execution of Algorithm 2 with an opaque obstacle, testing the second set of specific goals.",
+    title: "Exec5 | Algo2 | Obstacle:Pole | Goals2",
+    description: "Execution of Algorithm 2 with a pole, testing Goal Set 2.",
     data: algo2PresetData3
   },
   {
-    title: "Exec6 | Algo2 | Obstacle:opaque | Goals3",
-    description: "Execution of Algorithm 2 with an opaque obstacle, testing the third set of specific goals.",
+    title: "Exec6 | Algo2 | Obstacle:Pole | Goals3",
+    description: "Execution of Algorithm 2 with a pole, testing Goal Set 3.",
     data: algo2PresetData4
   },
 ];
-
-

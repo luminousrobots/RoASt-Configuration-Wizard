@@ -1005,7 +1005,7 @@
 
 
 
-              <div class="md:col-span-1 lg:col-span-1 field-group">
+              <div class="md:col-span-1 lg:col-span-1 field-group" style="display: none;">
                 <label
                   for="generation_mode_select"
                   class="block text-sm font-semibold text-gray-700 mb-2"
@@ -1038,7 +1038,7 @@
                   for="generation_mode_value"
                   id="generation_mode_value_label"
                   class="block text-sm font-semibold text-gray-700 mb-2"
-                  >Level
+                  >Max Generation Level
                   <span
                     id="badge_generation_mode_value"
                     class="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800"
@@ -1054,6 +1054,7 @@
                   placeholder="e.g., 5"
                   value="5"
                 />
+                <p class="mt-1 text-xs text-gray-500 italic">Note: 0 means unlimited levels</p>
               </div>
 
               <div

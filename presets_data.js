@@ -93,6 +93,101 @@ const algo1PresetData = {
   ]
 };
 
+const algo1PresetData2 = {
+  "obstacle": "O",
+  "number_of_robots": 2,
+  "number_of_colors": 3,
+  "visibility_range": 1,
+  "all_color_letters": [
+    "F",
+    "L",
+    "R"
+  ],
+  "leader_colors": [
+    "L",
+    "R"
+  ],
+  "existing_algorithm_path": "/src/data/algorithms_data.json",
+  "generation_mode": {
+    "ProgressiveValidationByLevels": 5
+  },
+  "opacity": false,
+  "is_obstacle_opaque": true,
+  "max_combined_goals_execution_length": null,
+  "web_algo_colors": "  F: 255\n  L: 16711680\n  R: 32768\n  O: 16753920",
+  "web_algo_initial_configuration": "...........\n.WWWWWWWWW.\n.W.......W.\n.W.......W.\n.W.F.L...W.\n.W...O...W.\n.W.......W.\n.W.......W.\n.W.......W.\n.WWWWWWWWW.\n...........",
+  "web_algo_walls": [[0, 0], [11, 11]],
+  "moving_on_space_pattern": [
+    [["R", 0, 0], ["F", -1, 0]],
+    [["L", 0, 0], ["F", -1, 0]]
+  ],
+  "initial_configurations": [
+    [[["O", 0, 0], ["R", 1, 1], ["F", 0, 1]], false],
+    [[["O", 0, 0], ["R", 0, 1], ["F", -1, 1]], true],
+    [[["O", 0, 0], ["R", 2, 0], ["F", 1, 0]], false],
+    [[["O", 0, 0], ["R", -1, 0], ["F", -2, 0]], true],
+    [[["O", 0, 0], ["R", 1, -1], ["F", 0, -1]], false],
+    [[["O", 0, 0], ["R", 0, -1], ["F", -1, -1]], true],
+    [[["O", 0, 0], ["L", 1, 1], ["F", 0, 1]], false],
+    [[["O", 0, 0], ["L", 0, 1], ["F", -1, 1]], true],
+    [[["O", 0, 0], ["L", 2, 0], ["F", 1, 0]], false],
+    [[["O", 0, 0], ["L", -1, 0], ["F", -2, 0]], true],
+    [[["O", 0, 0], ["L", 1, -1], ["F", 0, -1]], false],
+    [[["O", 0, 0], ["L", 0, -1], ["F", -1, -1]], true]
+  ],
+  "number_of_goals": 8,
+  "goals": [
+    {
+      "initial_positions": [["R", 0, 1], ["F", -1, 1], ["O", 0, 0]],
+      "targets": [[2, [["R", 2, 1], ["F", 1, 1], ["O", 0, 0]], [], []]],
+      "boundary": [-2, 3, -1, 2],
+      "wall": [null, null]
+    },
+    {
+      "initial_positions": [["R", 0, -1], ["F", -1, -1], ["O", 0, 0]],
+      "targets": [[2, [["R", 2, -1], ["F", 1, -1], ["O", 0, 0]], [], []]],
+      "boundary": [-2, 3, -2, 1],
+      "wall": [null, null]
+    },
+    {
+      "initial_positions": [["L", 0, 1], ["F", -1, 1], ["O", 0, 0]],
+      "targets": [[2, [["L", 2, 1], ["F", 1, 1], ["O", 0, 0]], [], []]],
+      "boundary": [-2, 3, -1, 2],
+      "wall": [null, null]
+    },
+    {
+      "initial_positions": [["L", 0, -1], ["F", -1, -1], ["O", 0, 0]],
+      "targets": [[2, [["L", 2, -1], ["F", 1, -1], ["O", 0, 0]], [], []]],
+      "boundary": [-2, 3, -2, 1],
+      "wall": [null, null]
+    },
+    {
+      "initial_positions": [["R", -1, 0], ["F", -2, 0], ["O", 0, 0]],
+      "targets": [[3, [["F", -2, 0], ["L", -3, 0], ["O", 0, 0]], [], []]],
+      "boundary": [-4, 1, -2, 1],
+      "wall": [null, null]
+    },
+    {
+      "initial_positions": [["L", -1, 0], ["F", -2, 0], ["O", 0, 0]],
+      "targets": [[4, [["L", 2, 1], ["F", 1, 1], ["O", 0, 0]], [], []]],
+      "boundary": [-3, 3, -1, 2],
+      "wall": [null, null]
+    },
+    {
+      "initial_positions": [["R", -2, 0], ["F", -1, 0], ["O", 0, 0]],
+      "targets": [[1, [["O", 0, 0], ["F", -2, 0], ["R", -3, 0]], [], []]],
+      "boundary": [-4, 1, -1, 1],
+      "wall": [null, null]
+    },
+    {
+      "initial_positions": [["L", -2, 0], ["F", -1, 0], ["O", 0, 0]],
+      "targets": [[1, [["L", -3, 0], ["F", -2, 0], ["O", 0, 0]], [], []]],
+      "boundary": [-4, 1, -1, 1],
+      "wall": [null, null]
+    }
+  ]
+};
+
 
 const algo2PresetData0 = {
   "obstacle": "O",
@@ -864,28 +959,33 @@ const algorithmPresets = [
     data: algo1PresetData
   },
   {
-    title: "Exec2 | Algo2 | Obstacle:Pole | Goals1 | Main",
+    title: "Exec2 | Algo1 | Obstacle:Pole | Goals2 ",
+    description: "Variant of Algorithm 1 with a pole, with an additional step on the last goal in the standard goal set.",
+    data: algo1PresetData
+  },
+  {
+    title: "Exec3 | Algo2 | Obstacle:Pole | Goals1 | Main",
     description: "Primary execution of Algorithm 2 with a pole and the standard goal set.",
     data: algo2PresetData0
   },
   {
-    title: "Exec3 | Algo2 | Obstacle:Pole | Goals1:Reordered",
+    title: "Exec4 | Algo2 | Obstacle:Pole | Goals1:Reordered",
     description: "Variant of Algorithm 2 with a pole, using a reordered version of the standard goal set.",
     data: algo2PresetData1
   },
   {
-    title: "Exec4 | Algo2 | Obstacle:Hole | Goals1",
+    title: "Exec5 | Algo2 | Obstacle:Hole | Goals1",
     description: "Variant of Algorithm 2 with a hole and standard goals to test visibility through it.",
     data: algo2PresetData2
   },
 
   {
-    title: "Exec5 | Algo2 | Obstacle:Pole | Goals2",
+    title: "Exec6 | Algo2 | Obstacle:Pole | Goals2",
     description: "Execution of Algorithm 2 with a pole, testing Goal Set 2.",
     data: algo2PresetData3
   },
   {
-    title: "Exec6 | Algo2 | Obstacle:Pole | Goals3",
+    title: "Exec7 | Algo2 | Obstacle:Pole | Goals3",
     description: "Execution of Algorithm 2 with a pole, testing Goal Set 3.",
     data: algo2PresetData4
   },

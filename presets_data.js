@@ -14,7 +14,7 @@ const algo1PresetData = {
   ],
   "existing_algorithm_path": "/src/data/algorithms_data.json",
   "generation_mode": {
-    "ProgressiveValidationByLevels": 5
+    "ProgressiveValidationByLevels": 0
   },
   "opacity": false,
   "is_obstacle_opaque": true,

@@ -1084,7 +1084,7 @@ const algorithmPresets = [
   },
   {
     title: "Exec8 | Algo1 | Pole | BadGoals",
-    description: "Primary execution of Algorithm 3 with a pole and the standard goal set.",
+    description: "Variant of Algorithm 1 where goal 6 is modified (the leader switches its color from L to R when avoiding the obstacle). This configuration generates 5 candidate algorithms, but none of them pass the simulation phase.",
     data: algo1PresetData2
   }
 ];

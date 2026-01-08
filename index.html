@@ -2932,59 +2932,27 @@
           }
         }
 
-        // Get the first essential collected config from collectedConfigurations global variable
+        // Get the first initial configuration from allLocalConfigs
         let firstEssentialConfig = null;
 
-        console.log("=== Starting to find first essential config ===");
+        console.log("=== Getting first initial config ===");
         console.log(
-          "Collected configurations from global var:",
-          collectedConfigurations
+          "All local configs (initial configurations):",
+          allLocalConfigs
         );
 
-        if (collectedConfigurations && collectedConfigurations.length > 0) {
-          // Search through collected configs for the first essential one
-          for (const configItem of collectedConfigurations) {
-            console.log("Checking collected config item:", configItem);
-
-            if (Array.isArray(configItem) && configItem.length >= 2) {
-              const [config, isLeader] = configItem;
-              
-              // Calculate isEssential dynamically
-              const leaderChars = Array.from(
-                document.querySelectorAll(".leader-color-checkbox:checked")
-              ).map((cb) => cb.value);
-              
-              const isEssentialConfig = isEssential(config, visibility, leaderChars);
-
-              console.log("  Config:", config, "  IsEssential (Calculated):", isEssentialConfig);
-
-              if (isEssentialConfig === true && Array.isArray(config)) {
-                firstEssentialConfig = config;
-                console.log(
-                  "✓ FOUND FIRST ESSENTIAL CONFIG:",
-                  firstEssentialConfig
-                );
-                break;
-              }
-            }
-          }
-
-          // If no essential config found, use first available config
-          if (
-            !firstEssentialConfig &&
-            Array.isArray(collectedConfigurations[0])
-          ) {
-            if (Array.isArray(collectedConfigurations[0][0])) {
-              firstEssentialConfig = collectedConfigurations[0][0];
-              console.log(
-                "Using first available config (no essential found):",
-                firstEssentialConfig
-              );
-            }
+        if (allLocalConfigs && allLocalConfigs.length > 0) {
+          // Just use the first config, no need to check for essential
+          if (allLocalConfigs[0] && allLocalConfigs[0].config && Array.isArray(allLocalConfigs[0].config)) {
+            firstEssentialConfig = allLocalConfigs[0].config;
+            console.log(
+              "Using first initial config:",
+              firstEssentialConfig
+            );
           }
         } else {
           console.log(
-            "No collected configurations available in global variable"
+            "No initial configurations available in allLocalConfigs"
           );
         }
 
@@ -3007,19 +2975,38 @@
 
         if (firstEssentialConfig && Array.isArray(firstEssentialConfig)) {
           console.log("Placing robots from config...");
+          
+          // Find the obstacle position in the config to use as reference
+          let obstacleX = 0, obstacleY = 0;
+          for (const robotData of firstEssentialConfig) {
+            if (Array.isArray(robotData) && robotData.length >= 3) {
+              const [letter] = robotData;
+              if (letter === 'O' || letter === 'W') {
+                obstacleX = robotData[1];
+                obstacleY = robotData[2];
+                console.log(`Found obstacle at (${obstacleX}, ${obstacleY})`);
+                break;
+              }
+            }
+          }
+          
+          // Now place all robots, adjusting positions so obstacle is at center
           for (let i = 0; i < firstEssentialConfig.length; i++) {
             const robotData = firstEssentialConfig[i];
             console.log("Processing robot data:", robotData);
             if (Array.isArray(robotData) && robotData.length >= 3) {
               const [letter, relX, relY] = robotData;
 
-              // Add center offset to relative positions
-              // grid[row][col] = grid[y][x], so:
-              const gridRow = centerY + relY; // Y coordinate (row)
-              const gridCol = centerX + relX; // X coordinate (column)
+              // Calculate position relative to obstacle, then place at grid center
+              const adjustedX = relX - obstacleX;
+              const adjustedY = relY - obstacleY;
+              
+              // grid[row][col] where row 0 is at TOP, so Y-axis is inverted
+              const gridRow = centerY - adjustedY; // Y coordinate (row) - INVERTED for top-to-bottom grid
+              const gridCol = centerX + adjustedX; // X coordinate (column)
 
               console.log(
-                `Robot ${letter}: rel(${relX},${relY}) -> grid(${gridRow},${gridCol})`
+                `Robot ${letter}: config(${relX},${relY}) -> adjusted(${adjustedX},${adjustedY}) -> grid[${gridRow}][${gridCol}]`
               );
 
               // Check bounds within inner area

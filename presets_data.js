@@ -945,8 +945,8 @@ const algo2PresetData4 = {
     },
     {
       "initial_positions": [["O", 0, 0], ["F", -2, 0], ["L", -1, 0]],
-      "targets": [[3, [["O", 0, 0], ["L", -3, 1], ["F", -2, 1]], [], []]],
-      "boundary": [-4, 1, -1, 2],
+      "targets": [[2, [["O", 0, 0], ["F", -1, 1], ["L", -2, 1]], [], []]],
+      "boundary": [-3, 1, -1, 2],
       "wall": [null, null]
     }
   ]
@@ -1084,7 +1084,7 @@ const algorithmPresets = [
   },
   {
     title: "Exec8 | Algo1 | Pole | BadGoals",
-    description: "Variant of Algorithm 1 where goal 6 is modified (the leader switches its color from L to R when avoiding the obstacle). This configuration generates 5 candidate algorithms, but none of them pass the simulation phase.",
+    description: "Variant of Algorithm 1 with a pole, using the standard goals where the 6th goal's target positions have the leader switching its color from L to R. This generates 5 candidate algorithms, but none of them are valid (they are cyclic).",
     data: algo1PresetData2
   }
 ];

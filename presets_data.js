@@ -1283,43 +1283,43 @@ const algorithmPresets = [
     data: algo1PresetData1
   },
   {
-    title: "Exec3 | Algo1 | Hole | Goals1",
-    description: "Primary execution of Algorithm 1 with a Hole and the standard goal set.",
-    data: algo1PresetData2
-  },
-  {
-    title: "Exec4 | Algo2 | Pole | Goals1 | Main",
+    title: "Exec3 | Algo2 | Pole | Goals1 | Main",
     description: "Primary execution of Algorithm 2 with a pole and the standard goal set.",
     data: algo2PresetData0
   },
   {
-    title: "Exec5 | Algo2 | Pole | Goals2",
+    title: "Exec4 | Algo2 | Pole | Goals2",
     description: "Variant of Algorithm 2 with a pole, using a reordered version of the standard goal set.",
     data: algo2PresetData1
   },
   {
-    title: "Exec6 | Algo2 | Hole | Goals1",
+    title: "Exec5 | Algo2 | Hole | Goals1",
     description: "Variant of Algorithm 2 with a hole and standard goals to test visibility through it.",
     data: algo2PresetData2
   },
   {
-    title: "Exec7 | Algo2 | Pole | Goals3",
+    title: "Exec6 | Algo2 | Pole | Goals3",
     description: "Variant of Algorithm 2 with a pole, using the standard goals where the 11th goal has a different target position with opposite direction.",
     data: algo2PresetData3
   },
   {
-    title: "Exec8 | Algo2 | Pole | Goals4",
+    title: "Exec7 | Algo2 | Pole | Goals4",
     description: "Variant of Algorithm 2 with a pole, using the standard goals where the 9th goal's target positions have a one-step shift to the right.",
     data: algo2PresetData4
   },
   {
-    title: "Exec9 | Algo2 | Pole | Goals5",
+    title: "Exec8 | Algo2 | Pole | Goals5",
     description: "Variant of Algorithm 2 with a pole, combining modifications from Exec 6 and Exec 7: the 11th goal has a different target position with opposite direction (same as Exec 6), and the 9th goal's target positions have a one-step shift to the right (same as Exec 7).",
     data: algo2PresetData5
   },
   {
-    title: "Exec10 | Algo1 | Pole | BadGoals",
+    title: "Exec9 | Algo1 | Pole | BadGoals",
     description: "Variant of Algorithm 1 with a pole, using the standard goals where the 6th goal's target positions have the leader switching its color from L to R. This generates 5 candidate algorithms, but none of them are valid (they are cyclic).",
     data: algo1PresetData3
-  }
+  },
+  {
+    title: "Exec10 | Algo1 | Hole | Goals1",
+    description: "Primary execution of Algorithm 1 with a Hole and the standard goal set.",
+    data: algo1PresetData2
+  },
 ];

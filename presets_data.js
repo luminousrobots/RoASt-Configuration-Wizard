@@ -1283,7 +1283,7 @@ const algorithmPresets = [
     data: algo1PresetData1
   },
   {
-    title: "Exec3 | Algo1 | Hole | Goals1 | Main",
+    title: "Exec3 | Algo1 | Hole | Goals1",
     description: "Primary execution of Algorithm 1 with a Hole and the standard goal set.",
     data: algo1PresetData2
   },

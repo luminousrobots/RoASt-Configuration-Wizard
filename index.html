@@ -6774,7 +6774,8 @@
               font-size: 0.8em;
               font-family: monospace;
             `;
-              if (currentPreset !== "custom") {
+              // Simulation goal steps should be editable when canEdit is true
+              if (!canEdit) {
                 stepsInput.disabled = true;
                 stepsInput.style.opacity = "0.5";
                 stepsInput.style.cursor = "not-allowed";
@@ -7062,7 +7063,8 @@
                 font-size: 0.8em;
                 font-family: monospace;
               `;
-                if (currentPreset !== "custom") {
+                // Simulation goal steps should be editable when canEdit is true
+                if (!canEdit) {
                   stepsInput.disabled = true;
                   stepsInput.style.opacity = "0.5";
                   stepsInput.style.cursor = "not-allowed";

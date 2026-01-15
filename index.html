@@ -1088,7 +1088,7 @@
 
             <h3 class="section-header mt-8 mb-4">Obstacle Configuration</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div class="field-group">
+              <div class="field-group" style="display: none;">
                 <label
                   for="obstacle_type"
                   class="block text-sm font-semibold text-gray-700 mb-2"
@@ -1145,7 +1145,6 @@
             <div class="mt-4 p-4 bg-blue-50 border-2 border-blue-200 rounded-xl">
               <p class="text-sm text-blue-900">
                 <strong>📌 Note:</strong> Obstacle colors are predefined - 
-                <span class="font-semibold">W (Wall)</span> uses <strong>Black</strong> color, 
                 <span class="font-semibold">O (Custom Obstacle)</span> uses <strong>Orange</strong> color.
               </p>
             </div>
@@ -2539,6 +2538,14 @@
             const currentValue = toggleBtn.dataset.essential === "true";
             toggleBtn.dataset.essential = (!currentValue).toString();
             updateToggleBtn();
+            
+            // Update status label to indicate modification
+            const configStatusLabel = document.getElementById('config-status-label');
+            if (configStatusLabel) {
+              configStatusLabel.textContent = 'Modified';
+              configStatusLabel.className = 'ml-2 px-2 py-1 text-xs font-medium rounded bg-orange-100 text-orange-800';
+              configStatusLabel.style.display = 'inline-block';
+            }
           });
           
           wrapper.appendChild(toggleBtn);
@@ -2802,7 +2809,8 @@
             allLocalConfigs.push({
               config: config,
               isLeader: isLeaderConfig,
-              robotsCanSeeEachOther: robotsCanSeeEachOther
+              robotsCanSeeEachOther: robotsCanSeeEachOther,
+              isEssential: isEssential  // Store the original essential value from config
             });
           });
         } else {
@@ -2836,12 +2844,14 @@
         allLocalConfigs.forEach((configObj, i) => {
           // Mark as excluded if robots cannot see each other (invalid config)
           const isExcluded = !configObj.robotsCanSeeEachOther;
+          // Use the stored isEssential value if available, otherwise fall back to isLeader
+          const essentialValue = configObj.hasOwnProperty('isEssential') ? configObj.isEssential : configObj.isLeader;
           const grid = createGrid(
             configObj.config,
             visibility,
             `Initial Config ${i}`,
             standardBounds,
-            configObj.isLeader,
+            essentialValue,
             isExcluded,
             true
           );
@@ -4329,7 +4339,7 @@
             }
 
             const config = {
-              obstacle: document.getElementById("obstacle_type").value,
+              obstacle: "O",
               number_of_robots:
                 parseInt(document.getElementById("number_of_robots").value) ||
                 0,

@@ -12,7 +12,7 @@ const algo1PresetData0 = {
     "L",
     "R"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data.json",
+  "existing_algorithm_path": "/src/data/algo1.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 0
   },
@@ -107,7 +107,7 @@ const algo1PresetData1 = {
     "L",
     "R"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data.json",
+  "existing_algorithm_path": "/src/data/algo1.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 0
   },
@@ -201,7 +201,7 @@ const algo1PresetData2 = {
     "L",
     "R"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data.json",
+  "existing_algorithm_path": "/src/data/algo1.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 0
   },
@@ -295,7 +295,7 @@ const algo1PresetData3 = {
     "L",
     "R"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data.json",
+  "existing_algorithm_path": "/src/data/algo1.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 0
   },
@@ -388,7 +388,7 @@ const algo2PresetData0 = {
   "leader_colors": [
     "L"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data2.json",
+  "existing_algorithm_path": "/src/data/algo2.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 4
   },
@@ -521,7 +521,7 @@ const algo2PresetData2 = {
   "leader_colors": [
     "L"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data2.json",
+  "existing_algorithm_path": "/src/data/algo2.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 4
   },
@@ -661,7 +661,7 @@ const algo2PresetData1 = {
   "leader_colors": [
     "L"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data2.json",
+  "existing_algorithm_path": "/src/data/algo2.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 4
   },
@@ -792,7 +792,7 @@ const algo2PresetData3 = {
   "leader_colors": [
     "L"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data2.json",
+  "existing_algorithm_path": "/src/data/algo2.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 4
   },
@@ -924,7 +924,7 @@ const algo2PresetData4 = {
   "leader_colors": [
     "L"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data2.json",
+  "existing_algorithm_path": "/src/data/algo2.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 4
   },
@@ -1058,7 +1058,7 @@ const algo3PresetData = {
     "L",
     "R"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data3.json",
+  "existing_algorithm_path": "/src/data/algo3.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 4
   },
@@ -1151,7 +1151,7 @@ const algo2PresetData5 = {
   "leader_colors": [
     "L"
   ],
-  "existing_algorithm_path": "/src/data/algorithms_data2.json",
+  "existing_algorithm_path": "/src/data/algo2.json",
   "generation_mode": {
     "ProgressiveValidationByLevels": 4
   },
